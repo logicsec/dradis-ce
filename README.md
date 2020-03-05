@@ -63,66 +63,6 @@ $ bundle exec rails server
 
 You can browse to the app at http://localhost:3000/
 
-### Using Vagrant
-
-If you'd like to use dradis in Vagrant, you can use the included Vagrantfile.
-
-```
-# Clone the repo
-git clone https://github.com/dradis/dradis-ce.git
-
-# install/start the vagrant box
-vagrant up
-# ssh into the box
-vagrant ssh
-
-# install ruby in the vagrant box
-cd /dradis/dradis-ce
-rvm install "$(cat .ruby-version)"
-
-
-# Then you can proceed with standard setup from within Vagrant
-ruby bin/setup
-# You'll need to tell the server to bind to 0.0.0.0 for port forwarding:
-bundle exec rails server -b 0.0.0.0
-```
-
-### Stable release
-
-In https://dradisframework.com/ce/download.html you will find the latest packages.
-
-
-## Getting help
-
-* http://dradisframework.org/
-* [Community Forums](https://discuss.dradisframework.org/)
-* [Slack channel](https://evening-hamlet-4416.herokuapp.com/)
-* IRC: **#dradis** `irc.freenode.org`
-
-
-## Contributing
-
-Please see CONTRIBUTING.md for details.
-
-Many thanks to all Dradis Framework [contributors](https://github.com/dradis/dradis-ce/graphs/contributors). Dradis has been around since 2007, and in 2016 we had to do some nasty Git gimnastics resulting in a lot of the previous SVN + Git history no longer being available in the current repo. We haven't deleted it though, and we're still very much grateful for the work of our former [contributors](https://github.com/dradis/dradis-legacy/graphs/contributors).
-
-
-### Branching model
-We're following Vincent Driessen's [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/) to try to keep things organized.
-
-In this repo we will have: *master*, *develop*, *release-* and *hotfix-* branches.
-
-If you need to work on a feature branch, fork the repo and work on your own copy. We can check it from there. Eventually you'll merge to your *develop* and back to origin's *develop*.
-
-
-### Community Projects
-
-* [check-user-pwned-dradis by GoVanguard](https://github.com/GoVanguard/check-user-pwned-dradis): Searches for compromised emails across data breaches and creates Dradis Issues
-* [csv-data-import-dradis by GoVanguard](https://github.com/GoVanguard/csv-data-import-dradis): Imports Issues, Nodes, Evidence, and Notes from a CSV file into Dradis
-* [PyDradis by Novacoast](https://github.com/ncatlabs/pydradis): Python wrapper for the Dradis REST API
-
-Have you built a Dradis connector, add-on, or extension? Contact us so that we can feature it here.
-
 
 ## License
 
