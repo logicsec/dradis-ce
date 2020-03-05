@@ -55,7 +55,7 @@ There are two editions of Dradis Framework:
 ### Git release (recommended)
 
 ```
-$ git clone https://github.com/dradis/dradis-ce.git
+$ git clone https://github.com/logicsec/dradis-custom.git
 $ cd dradis-ce/
 $ ruby bin/setup
 $ bundle exec rails server
