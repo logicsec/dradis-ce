@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<methodology>
+	<name>PTES Intelligence Gathering</name>
+	<sections>
+		<section>
+			<name>Open Source Intelligence (OSINT)</name>
+			<tasks>
+				<task>Corporate - search State division for information regarding the legal entity, shareholders, members, officers or other persons involved in the target entity.</task>
+				<task>Physical - Search public sites like Google for information on the phyiscal locations of the target corporation</task>
+				<task>Shared/Individual Locations - Note if the location is an individual building or simply a suite in a larger facility.</task>
+				<task>Attempt to identify neighboring businesses as well as common areas</task>
+				<task>Owner - identify the actual property owner(s). This can either be an individual, group, or corporation.</task>
+				<task>Land/tax records - if you know the city or zipcode in which your target resides, use a site such as http://publicrecords.netronline.com/ to determine which county that is in. Then switching over to Google you can use a query such as "XXXX county tax records", "XXXX county recording office" or "XXXX county assessor" and that should lead you to a searchable online database if one exists. If it does not exist, you can still call the county recording office and request that they fax you specific records if you have an idea of what you are looking for.</task>
+				<task>Building department - For some assessments, it might make sense to go a step further and query the local building department for additional information. Depending on the city, the target's site might be under county or city jurisdiction. Typically that can be determined by a call to either entity.</task>
+				<task>Datacenter Locations - Identify any target business data center locations via either the corporate website, public filings, land records or via a search engine.</task>
+				<task>Time Zones - Identify the time zones that the target operates in.</task>
+				<task>Offsite gathering - Identify any recent or future offsite gatherings or parties via either the corporate website or via a search engine.</task>
+				<task>Product/Services - Identify the target business products and any significant data related to such launches via the corporate website, new releases or via a search engine. Publicly available information includes, but is not limited to, foreign language documents, radio and television broadcasts, Internet sites, and public speaking.</task>
+				<task>Company Dates - Identify significant company dates like potential corporate meetings, board meetings, investor meetings, or corporate anniversaries for insight into potential days where staff may be on alert higher than normal.</task>
+				<task>Position Identification - Identify and document the top positions within the organization.</task>
+				<task>Organizational Chart - Understand the organizational structure, not only the depth of the structure, but also the breadth and functional groups.</task>
+				<task>Corporate Communications - Identify corporate communications either via the corporate website or a job search engine.</task>
+				<task>Marketing - Identify marketing communications used to make corporate announcements regarding currently, or future product releases, and partnerships.</task>
+				<task>Lawsuits - Identify any communications regarding the targets involvement in litigation.</task>
+				<task>Transactions - Identify and communications involving corporate transactions that may be an indirect response to a marketing announcement or lawsuit.</task>
+				<task>Job openings - Search current job openings or postings via either the corporate website or via a job search engine for information regarding currently, or future, technology implementations.</task>
+				<task>Relationships - Identify the targets logical relationships. Publicly available information should be leveraged to determine the target business relationship with vendors, business partners, law firms, etc. This is often available via news releases, corporate web sites (target and vendors), and potentially via industry related forums.</task>
+				<task>Charity Affiliations - Identify any target business charity affiliations via either the corporate website or via a search engine.</task>
+				<task>Network Providers - Identify any network provisioning or providers either via the allocated netblock /address information, corporate website or via a search engine.</task>
+				<task>Business Partners - Identify business partners for insight into not only the corporate culture of a target, but also potentially technologies being used.</task>
+				<task>Competitors - Identify competitors for a window into potential adversaries. It is not uncommon for competitors to announce news that could impact the target. These could range from new hires, product launches, and even partnership agreements.</task>
+			</tasks>
+		</section>
+		<section>
+			<name>Individuals</name>
+			<tasks>
+				<task>Social Networking Profile - Identify the numbers of active Social Networking websites as well as the number of users. This is a prime location to identify employee's friendships, kinships, common interest, financial exchanges, likes/dislikes, sexual relationships, beliefs, corporate knowledge or prestige.</task>
+				<task>Social Media Tone and Frequency - Identify an employee's tone and frequency of postings can be a critical indicator of a disgruntled employee as well as the corporate acceptance of social networking. While time consuming it is possible to establish an employee's work schedule and vacation periods.</task>
+				<task>Location awareness - Most social networking sites offer the ability to include geolocation information in postings. This information can be useful in identifying exactly where the person was physically located when a posting was made. In addition, it is possible that geolocation information is included in images that are uploaded to social networking sites.</task>
+				<task>Cree.py - Use Cree.py, an open source intelligence-gathering application to automate the task of information gathering from Twitter as well as FourSquare. In addition, Cree.py can gather any geolocation data from flickr, twitpic.com, yfrog.com, img.ly, plixi.com, twitrpix.com, foleext.com, shozu.com, pickhur.com, moby.to, twitsnaps.com and twitgoo.com.</task>
+			</tasks>
+		</section>
+		<section>
+			<name>Internet Footprint</name>
+			<tasks>
+				<task>Email addresses - Gathering email addresses can provide information about potential naming conventions as well as potential targets for later use. There are many tools that can be used to gather email addresses: Maltego, TheHarvester, NetGlub,  for example.</task>
+				<task>Usernames/Handles - Identify usernames and handles that are associated with a particular email. A good place to location this type of information is within discussion groups (Newsgroups, Mailing lists, forums, chat rooms, etc.).</task>
+				<task>Personal Domain Names - Locate personal domains that belong to target employees.</task>
+				<task>Personal Activities - Identify individual's interests outside of work through their created and published audio files and videos.</task>
+				<task>Archived Information - Access archived copies of web site for access to content no longer available from the original source. The primary means is to utilize the cached results under Google's cached results. </task>
+				<task>Document leakage - Collect publicly available documents for essential data (date, time, location specific information, language, and author). Data collected could provide insight into the current environment, operational procedures, employee training, and human resources.</task>
+				<task>Metadata leakage - Identifying Metadata is possible using specialized search engine. The goal is to identify data that is relevant to the target corporation. It may be possible to identify locations, hardware, software and other relevant data from Social Networking posts.</task>
+				<task></task>
+			</tasks>
+		</section>
+		<section>
+			<name>Covert Gathering</name>
+			<tasks>
+				<task>On-location gathering: Adjacent Facilities - Once the physical locations have been identified, it is useful to identify the adjacent facilities. Adjacent facilities should be documented and if possible, include any observed shared facilities or services.</task>
+				<task>On-location gathering: Security Guards - Observe security guard movements directly to determine procedures in use or establish movement patterns. You will need to observe what the security guards are protecting. It is possible to utilize binoculars to observe any movement from a safe distance.
+
+				Some security guards are trained and licensed to carry firearms for their own safety and for personnel they are entrusted to protect. The use of firearms by security guards should not be a surprise, if noted. This should be documented prior to beginning the engagement. If firearms are observed, ensure that precaution is taken not to take any further action unless specifically authorized and trained to do so.</task>
+				<task>On-location gathering: Badge Usage - By observing, badge usage it may be possible to actually duplicate the specific badge being utilized. Note if the badge is required to be visible or shown to gain physical access to the property or facility. Badge usage should be documented and if possible, include observed validation procedures.</task>
+				<task>On-location gathering: Locking Devices - These can be as simple as a door lock, dead-bolt, or complex as a cipher lock. Observing the type and placement location of the locking devices on doors it is possible to determine if the door in primarily used for ingress or egress. You will need to observe what the locking devices are protecting. All observations should be documented prior, and if possible photographs taken.</task>
+				<task>On-location gathering: Intrusion detection systems (IDS)/Alarms - Observe and document any intrusion detection systems or alarms. All observations should be documented prior, and if possible photographs taken.</task>
+				<task>On-location gathering: Security Lighting - Observe and document the type, number, and locations of security lighting in use.</task>
+				<task>On-location gathering: Surveillance /CCTV systems - Observe and document the Surveillance/CCTV system to identify the areas of coverage. While it might not be possible to determine the specific camera type being utilized or even the area of coverage it is possible to identify areas with or without limited coverage. It should be noted if the Surveillance/CCTV system is physically protected. If not, then it needs to be documented if the Surveillance/CCTV camera is vulnerable to someone deliberately destroying it.</task>
+				<task>On-location gathering: Access Control Devices - Access control can be achieved by a human (a security guard, or receptionist), through mechanical means such as locks and keys, or through technological means such as access control systems like the Access control vestibule. Observe and document the type, number, and locations of access control devices in use.</task>
+				<task>On-location gathering: Environmental Design - Observe the surrounding environmental of a building, or facility including facilities geography, landscape, architecture, and exterior design. Highlight potential areas of concern such as potential obscured areas due to geography and landscaping.</task>
+				<task>On-location gathering: Employee Behavior - Observe employee actions for insight into any corporate behaviors or acceptable norms, procedures in use, or ingress and egress traffic patterns. It is possible to utilize binoculars to observe any movement from a safe distance.</task>
+				<task>On-location gathering: Dumpster diving - Sift through commercial or residential trash to find items that have been discarded by their owners, but which may be useful. Dumpsters are usually located on private premises and therefore may subject the assessment team to potentially trespassing on property not owned by the target. Though the law is enforced with varying degrees of rigor, ensure that this is authorized as part of the engagement. Dumpster diving per se is often legal when not specifically prohibited by law. Rather than take the refuse from the area, it is commonly accepted to simply photograph the obtained material and then return it to the original dumpster.</task>
+				<task>On-location gathering: RF / Wireless Frequency scanning - Determine the frequencies in use within a given environment. Identify an effective range boundary, which involves determining the SNR at various points around a facility. To expedite the process, all frequencies in use should be determined prior to arrival. Particular attention should be paid to security guards, and frequencies that the target is licensed to use.</task>
+				<task>On-location gathering: Frequency Usage - Use a Frequency counter or spectrum analyzer to identify the transmitting frequencies in use around the target facility. All frequency ranges in use in and around the target should be documented.</task>
+				<task>On-location gathering: Equipement Identification - All radios and antennas in use should be identified. Include radio make and model as well as the length and type of antennas utilized.</task>
+				<task>On-location gathering: WLAN Discovery - Wireless Local Area Network (WLAN) discovery consists of enumerating the type of WLAN that is currently deployed. This can be one of the following: Unencrypted WLAN, WEP encrypted WLAN, WPA / WPA2 encrypted WLAN, LEAP encrypted WLAN, or 802.1x WLAN.</task>
+			</tasks>
+		</section>
+		<section>
+			<name>External Footprinting</name>
+			<tasks>
+				<task>Identify IP Ranges: WHOIS lookup. Determine which one of the WHOIS servers contains the information we're after. Given that we should know the TLD for the target domain, we simply have to locate the Registrar that the target domain is registered with. Once the appropriate Registrar is queried, obtain the Registrant information.</task>
+				<task>BGP Looking Glasses: identify the Autonomous System Number (ASN) for networks that participate in Border Gateway Protocol (BGP) by using a BGP4 and BGP6 looking glass.</task>
+				<task>Active + Passive Reconnaissance: manual browsing and Google hacking. See http://www.exploit-db.com/google-dorks for more information</task>
+				<task>Zone Transfers: Test the ability to perform a DNS zone transfer. Tools commonly used to perform zone transfers are host, dig, and nmap.</task>
+				<task>Reverse DNS: Otain valid server names in use within an organizational. There is a caveat that it must have a PTR (reverse) DNS record for it to resolve a name from a provided IP address. If it does resolve then the results are returned. Test the server with various IP addresses to see if it returns any results.</task>
+				<task>DNS Bruting: query DNS for the ability to perform zone transfers and potentially discover additional host names that are not commonly known. Common tools include Fierce2 (Linux), DNSEnum (Linux), and Dnsdict6 (Linux).</task>
+				<task>Port Scanning: Nmap ("Network Mapper") is the de facto standard for network auditing/scanning. Based on the IP set being assessed you would want to scan both the TCP and UDP ports across the range 1 to 65535. On large IP sets, those greater than 100 IP addresses, do not specify a port range.</task>
+				<task>SNMP Sweeps: Perform an SNMP sweep. "No response" from a probed IP address can mean machine unreachable, SNMP server not running, invalid community string, or the response datagram has not yet arrived.</task>
+				<task>SMTP Bounce Back: Also called a Non-Delivery Report/Receipt (NDR), a (failed) Delivery Status Notification (DSN) message, a Non-Delivery Notification (NDN) or simply a bounce, is an automated electronic mail message from a mail system informing the sender of another message about a delivery problem.This can be used to assist an attacker in fingerprint the SMTP server as SMTP server information, including software and versions, may be included in a bounce message.</task>
+				<task>Banner Grabbing: Perform this enumeration technique to glean information about computer systems on a network and the services running its open ports. Identify the version of applications and operating system that the target host are running. Banner grabbing is usually performed on Hyper Text Transfer Protocol (HTTP), File Transfer Protocol (FTP), and Simple Mail Transfer Protocol (SMTP); ports 80, 21, and 25 respectively. Tools commonly used to perform banner grabbing are Telnet, nmap, and Netcat.</task>
+			</tasks>
+		</section>
+		<section>
+			<name>Internal Footprinting</name>
+			<tasks>
+				<task>Ping Sweeps: Conduct a Ping sweep to determine which hosts respond. Nmap and Alive6 (Linux) are commonly used for this task.</task>
+				<task>Port Scanning: Nmap ("Network Mapper") is the de facto standard for network auditing/scanning. Based on IP set being assessed, you would want to scan the both TCP and UDP across port range to 1-65535. On large IP sets, those greater than 100 IP addresses do not specify a port range.</task>
+				<task>SNMP Sweeps: Perform an SNMP sweep. "No response" from a probed IP address can mean machine unreachable, SNMP server not running, invalid community string, or the response datagram has not yet arrived.</task>
+				<task>Metasploit: Active footprinting can also be performed to a certain extent through Metasploit.</task>
+				<task>DNS Zone Transfer (AXFR): There are numerous tools available to test the ability to perform a DNS zone transfer. Tools commonly used to perform zone transfers are host, dig and nmap.</task>
+				<task>SMTP bounce back (aka Non-Delivery Report/Receipt (NDR)): can be used to assist an attacker in fingerprint the SMTP server as SMTP server information, including software and versions, may be included in a bounce message.</task>
+				<task>Reverse DNS: Test the resver with various IP addresses to see if it returns any results.  It must have a PTR (reverse) DNS record for it to resolve a name from a provided IP address. If it does resolve then the results are returned.</task>
+				<task>Banner Grabbing: Perform this enumeration technique to glean information about computer systems on a network and the services running its open ports. Identify the version of applications and operating system that the target host are running. Banner grabbing is usually performed on Hyper Text Transfer Protocol (HTTP), File Transfer Protocol (FTP), and Simple Mail Transfer Protocol (SMTP); ports 80, 21, and 25 respectively. Tools commonly used to perform banner grabbing are Telnet, nmap, and Netcat.</task>
+				<task>VoIP Mapping: Gather information about the topology, the servers and the clients. The main goal here is to find live hosts, PBX type and version, VoIP servers/gateways, clients (hardware and software) types and versions. The majority of techniques assume a basic understanding of the Session Initiation Protocol (SIP).Common tools for this task are SMAP and SIPScan.</task>
+				<task>Enumerate extensions: Extensions are any client application or device that initiates a SIP connection, such as an IP phone, PC softphone, PC instant messaging client, or mobile device. The goal is to identify valid usernames or extensions of SIP devices. Enumerating extensions is usually a product of the error messages returned using the SIP method: REGISTER, OPTIONS, or INVITE. A tool that can be used to enumerate extensions is Svwar from the SIPVicious suite.</task>
+				<task>Asterisk Server: If you've identified an Asterisk server is in use, you need to utilize a username guessing tool such as enumIAX to enumerate Asterisk Exchange protocol usernames.</task>
+				<task>Packet Sniffing: Collect IP addresses and MAC addresses from systems that have packet traffic in the stream being analyzed. It may also be possible to grab login information, password hashes, and other credentials from the packet stream, or to determine which servers act as critical infrastructure.</task>
+			</tasks>
+		</section>
+	</sections>
+</methodology>

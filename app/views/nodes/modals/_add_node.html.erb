@@ -54,7 +54,7 @@
           <%= f.hidden_field :parent_id if type == :child %>
           <%= f.input :label %>
           <%= f.input :type_id,
-            collection: [["No icon", Node::Types::DEFAULT], ["Host", Node::Types::HOST]],
+            collection: [["No icon", Node::Types::DEFAULT], ["Host", Node::Types::HOST], ["Folder", Node::Types::FOLDER]],
             include_blank: false,
             label: 'Icon',
             input_html: { class: 'custom-select' }
@@ -79,7 +79,7 @@
           <%= select_tag(
             "nodes[type_id]",
             options_for_select(
-              [["No icon", Node::Types::DEFAULT], ["Host", Node::Types::HOST]]
+              [["No icon", Node::Types::DEFAULT], ["Host", Node::Types::HOST], ["Folder", Node::Types::FOLDER]]
             ),
             include_blank: false,
             class: 'custom-select')

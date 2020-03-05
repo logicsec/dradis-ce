@@ -1,6 +1,17 @@
 <div class="d-flex justify-content-between mb-3">
   <div class="btn-toolbar">
     <div class="btn-group mr-1">
+      <%= render 'shared/add_item_dropdown',
+        name: "Notes",
+        new_path: new_project_node_note_path(@node.project, @node),
+        category_id: nil,
+        button_class: 'btn btn-success h-100 ',
+        text: "Add",
+        menu_class: 'mt-1',
+        collapse_class: 'd-none'
+      %>
+    </div>
+    <div class="btn-group mr-1">
       <span class="btn js-items-table-select-all" title="Select all">
         <input type="checkbox" id="select-all" />
       </span>
@@ -12,7 +23,7 @@
       </a>
     </div>
 
-    <div class="btn-group dropdown">
+    <div class="btn-group dropdown mr-1">
       <button class="btn dropdown-toggle" data-toggle="dropdown" title="Choose columns to show"><i class="fa fa-columns"></i> <span class="caret"></span></button>
       <div class="dropdown-menu js-table-columns">
         <% columns.each do |column| %>

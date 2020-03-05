@@ -79,40 +79,40 @@ document.addEventListener "turbolinks:load", ->
   $('.modal').on 'shown.bs.modal', ->
     $(this).find('input:text:visible:first').focus()
 
-  $('.js-try-pro').on 'click', ->
-    $this   = $(this)
-    term    = $this.data('term')
-    $modal  = $('#try-pro')
-    $iframe = $('#try-pro iframe')
-    url     = $iframe.data('url')
+  # $('.js-try-pro').on 'click', ->
+  #   $this   = $(this)
+  #   term    = $this.data('term')
+  #   $modal  = $('#try-pro')
+  #   $iframe = $('#try-pro iframe')
+  #   url     = $iframe.data('url')
 
-    if $this.data('url')
-      url = $this.data('url')
+  #   if $this.data('url')
+  #     url = $this.data('url')
 
-      title = switch term
-        when 'boards' then '<span>[Dradis Pro feature]</span> Advanced boards and task assignment'
-        when 'contact-support' then '<span>[Dradis Pro feature]</span> Dedicated Support team'
-        when 'issuelib' then '<span>[Dradis Pro feature]</span> Integrated library of vulnerability descriptions'
-        when 'projects' then '<span>[Dradis Pro feature]</span> Work with multiple projects'
-        when 'remediation' then '<span>[Dradis Pro feature]</span> Integrated remediation tracker'
-        when 'word-reports' then '<span>[Dradis Pro feature]</span> Custom Word reports'
-        when 'excel-reports' then '<span>[Dradis Pro feature]</span> Custom Excel reports'
-        when 'node-boards' then '<span>[Dradis Pro feature]</span> Node-level methodologies'
-        when 'training-course' then 'Dradis Training Course'
-        when 'try-pro' then 'Upgrade to Dradis Pro'
+  #     title = switch term
+  #       when 'boards' then '<span>[Dradis Pro feature]</span> Advanced boards and task assignment'
+  #       when 'contact-support' then '<span>[Dradis Pro feature]</span> Dedicated Support team'
+  #       when 'issuelib' then '<span>[Dradis Pro feature]</span> Integrated library of vulnerability descriptions'
+  #       when 'projects' then '<span>[Dradis Pro feature]</span> Work with multiple projects'
+  #       when 'remediation' then '<span>[Dradis Pro feature]</span> Integrated remediation tracker'
+  #       when 'word-reports' then '<span>[Dradis Pro feature]</span> Custom Word reports'
+  #       when 'excel-reports' then '<span>[Dradis Pro feature]</span> Custom Excel reports'
+  #       when 'node-boards' then '<span>[Dradis Pro feature]</span> Node-level methodologies'
+  #       when 'training-course' then 'Dradis Training Course'
+  #       when 'try-pro' then 'Upgrade to Dradis Pro'
 
-      $modal.find('[data-behavior~=modal-title]').html(title)
-    else
-      $modal.find('[data-behavior~=modal-title]').text('Dradis Framework editions')
+  #     $modal.find('[data-behavior~=modal-title]').html(title)
+  #   else
+  #     $modal.find('[data-behavior~=modal-title]').text('Dradis Framework editions')
 
-    url = url + '?utm_source=ce&utm_medium=app&utm_campaign=try-pro&utm_term=' + term
+  #   url = url + '?utm_source=ce&utm_medium=app&utm_campaign=try-pro&utm_term=' + term
 
-    $iframe.attr('src', url)
-    $('#try-pro').modal()
+  #   $iframe.attr('src', url)
+  #   $('#try-pro').modal()
 
   # If project id is changed in project path
-  if !(/^\/projects\/1(\/|$)/.test(window.location.pathname))
-    $('[data-behavior~=project-teaser]').removeClass('d-none')
+  # if !(/^\/projects\/1(\/|$)/.test(window.location.pathname))
+  #   $('[data-behavior~=project-teaser]').removeClass('d-none')
 
   if ($poller = $("#activities-poller")).length
     unless ActivitiesPoller.initialized
@@ -143,49 +143,49 @@ document.addEventListener "turbolinks:load", ->
     if e.which == 13
       submitSearch()
 
-  # Collapsable div in sidebar collections
-  if $('[data-behavior~=collapse-collection]').length
-    $('[data-behavior~=collapse-collection]').click ->
-      $this = $(this)
-      $this.find('[data-behavior~=toggle-chevron]').toggleClass('fa-chevron-down fa-chevron-up')
+  # # Collapsable div in sidebar collections
+  # if $('[data-behavior~=collapse-collection]').length
+  #   $('[data-behavior~=collapse-collection]').click ->
+  #     $this = $(this)
+  #     $this.find('[data-behavior~=toggle-chevron]').toggleClass('fa-chevron-down fa-chevron-up')
 
-      if $this.is('[data-behavior~=import-box]') && $($this.data('target')).innerHeight() == 0
-        $($this.data('target')).find("input[type='text']:first").focus()
+  #     if $this.is('[data-behavior~=import-box]') && $($this.data('target')).innerHeight() == 0
+  #       $($this.data('target')).find("input[type='text']:first").focus()
 
-  # Close nav collapse menu when nav dropdown menu is opened
-  $('[data-behavior~=close-collapse]').on 'click', ->
-    $('[data-behavior~=navbar-collapse]').collapse 'hide'
-    return
+  # # Close nav collapse menu when nav dropdown menu is opened
+  # $('[data-behavior~=close-collapse]').on 'click', ->
+  #   $('[data-behavior~=navbar-collapse]').collapse 'hide'
+  #   return
 
   # Toggle sidebar menu
 
-  $sidebar = $('[data-behavior~=main-sidebar]')
+  # $sidebar = $('[data-behavior~=main-sidebar]')
 
-  sidebarOpen = -> 
-    $sidebar.removeClass('sidebar-collapsed').addClass('sidebar-expanded')
-    $sidebar.attr('data-behavior', 'main-sidebar sidebar-expanded')
-    $('[data-behavior~=back-fade]').removeClass('not-faded').addClass('faded')
+  # sidebarOpen = -> 
+  #   $sidebar.removeClass('sidebar-collapsed').addClass('sidebar-expanded')
+  #   $sidebar.attr('data-behavior', 'main-sidebar sidebar-expanded')
+  #   $('[data-behavior~=back-fade]').removeClass('not-faded').addClass('faded')
 
-  sidebarClose = ->
-    $sidebar.removeClass('sidebar-expanded').addClass('sidebar-collapsed')
-    $sidebar.attr('data-behavior', 'main-sidebar sidebar-collapsed')
-    $('[data-behavior~=back-fade]').removeClass('faded').addClass('not-faded')
+  # sidebarClose = ->
+  #   $sidebar.removeClass('sidebar-expanded').addClass('sidebar-collapsed')
+  #   $sidebar.attr('data-behavior', 'main-sidebar sidebar-collapsed')
+  #   $('[data-behavior~=back-fade]').removeClass('faded').addClass('not-faded')
 
-  $('[data-behavior~=sidebar-toggle]').on 'click', ->
-    if $sidebar.is('[data-behavior~=sidebar-collapsed]')
-      sidebarOpen()
-    else
-      if $(this).is('[data-behavior~=open-only]')
-        return
-      else
-        sidebarClose()
+  # $('[data-behavior~=sidebar-toggle]').on 'click', ->
+  #   if $sidebar.is('[data-behavior~=sidebar-collapsed]')
+  #     sidebarOpen()
+  #   else
+  #     if $(this).is('[data-behavior~=open-only]')
+  #       return
+  #     else
+  #       sidebarClose()
 
-  $('[data-behavior~=back-fade]').on 'click', ->
-    sidebarClose()
+  # $('[data-behavior~=back-fade]').on 'click', ->
+  #   sidebarClose()
 
-  $('[data-behavior~=sidebar-link]').on 'click', ->
-    if $sidebar.is('[data-behavior~=sidebar-expanded]')
-      sidebarClose() 
+  # $('[data-behavior~=sidebar-link]').on 'click', ->
+  #   if $sidebar.is('[data-behavior~=sidebar-expanded]')
+  #     sidebarClose() 
 
   # Scroll for more indicator functionality
   if $('[data-behavior~=restrict-height').length

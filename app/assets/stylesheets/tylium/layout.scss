@@ -57,10 +57,10 @@
   background: $secondaryBgColor;
   position: fixed;
   height: calc(100vh - 60px);
-  width: calc(100vw - 43px);
+  width: calc(100vw - 250px);
   min-width: 570px;
   top: $navbarHeight;
-  left: $sidebarCollapsed;
+  left: $sidebarExpanded;
   overflow: auto;
   font-size: 0.9rem;
 

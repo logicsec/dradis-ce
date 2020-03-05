@@ -45,5 +45,6 @@ class ProjectsController < AuthenticatedController
 
   def current_project
     @current_project ||= Project.new
+    #@current_project = Project.find(params[:id])
   end
 end

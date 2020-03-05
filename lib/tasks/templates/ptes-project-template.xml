@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dradis-template>
+  <name>PTES project</name>
+  <nodes type='array'>
+  <node>
+    <position type='integer'>0</position>
+    <label>PTES Documents</label>
+    <created-at type='datetime'>2013-07-31T08:19:18Z</created-at>
+    <updated-at type='datetime'>2013-07-31T11:36:48Z</updated-at>
+    <project-id type='integer'>11</project-id>
+    <type-id type='integer'>0</type-id>
+    <id type='integer'>2230</id>
+    <parent-id type='integer' nil='true'/>
+    <notes type='array'/>
+  </node>
+  <node>
+    <position type='integer'>2</position>
+    <label>Audit Documentation</label>
+    <created-at type='datetime'>2013-07-31T08:19:58Z</created-at>
+    <updated-at type='datetime'>2013-07-31T08:20:06Z</updated-at>
+    <project-id type='integer'>11</project-id>
+    <type-id type='integer'>0</type-id>
+    <id type='integer'>2232</id>
+    <parent-id type='integer' nil='true'/>
+    <notes type='array'/>
+  </node>
+  <node>
+    <position type='integer'>5</position>
+    <label>All Issues</label>
+    <created-at type='datetime'>2013-07-31T08:48:47Z</created-at>
+    <updated-at type='datetime'>2013-07-31T08:48:54Z</updated-at>
+    <project-id type='integer'>11</project-id>
+    <type-id type='integer'>3</type-id>
+    <id type='integer'>2235</id>
+    <parent-id type='integer' nil='true'/>
+    <notes type='array'/>
+  </node>
+  <node>
+    <position type='integer'>1</position>
+    <label>Preparation</label>
+    <created-at type='datetime'>2013-07-31T09:41:20Z</created-at>
+    <updated-at type='datetime'>2013-07-31T09:41:30Z</updated-at>
+    <project-id type='integer'>11</project-id>
+    <type-id type='integer'>0</type-id>
+    <id type='integer'>2236</id>
+    <parent-id type='integer'>2232</parent-id>
+    <notes type='array'/>
+  </node>
+  <node>
+    <position type='integer'>1</position>
+    <label>Intelligence Gathering</label>
+    <created-at type='datetime'>2013-07-31T12:31:01Z</created-at>
+    <updated-at type='datetime'>2013-07-31T12:31:09Z</updated-at>
+    <project-id type='integer'>11</project-id>
+    <type-id type='integer'>0</type-id>
+    <id type='integer'>2237</id>
+    <parent-id type='integer'>2232</parent-id>
+    <notes type='array'/>
+  </node>
+  <node>
+    <position type='integer'>2</position>
+    <label>Vulnerability Analysis</label>
+    <created-at type='datetime'>2013-07-31T12:31:20Z</created-at>
+    <updated-at type='datetime'>2013-07-31T12:31:30Z</updated-at>
+    <project-id type='integer'>11</project-id>
+    <type-id type='integer'>0</type-id>
+    <id type='integer'>2239</id>
+    <parent-id type='integer'>2232</parent-id>
+    <notes type='array'/>
+  </node>
+  <node>
+    <position type='integer'>3</position>
+    <label>Exploitation</label>
+    <created-at type='datetime'>2013-07-31T12:31:35Z</created-at>
+    <updated-at type='datetime'>2013-07-31T12:31:56Z</updated-at>
+    <project-id type='integer'>11</project-id>
+    <type-id type='integer'>0</type-id>
+    <id type='integer'>2240</id>
+    <parent-id type='integer'>2232</parent-id>
+    <notes type='array'/>
+  </node>
+  <node>
+    <position type='integer'>4</position>
+    <label>Post Exploitation</label>
+    <created-at type='datetime'>2013-07-31T12:32:00Z</created-at>
+    <updated-at type='datetime'>2013-07-31T12:32:12Z</updated-at>
+    <project-id type='integer'>11</project-id>
+    <type-id type='integer'>0</type-id>
+    <id type='integer'>2241</id>
+    <parent-id type='integer'>2232</parent-id>
+    <notes type='array'/>
+  </node>
+</nodes>
+<categories type='array' />
+</dradis-template>
