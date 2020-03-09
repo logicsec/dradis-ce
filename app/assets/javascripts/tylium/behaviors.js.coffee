@@ -159,26 +159,30 @@ document.addEventListener "turbolinks:load", ->
 
   # Toggle sidebar menu
 
-  # $sidebar = $('[data-behavior~=main-sidebar]')
+  $sidebar = $('[data-behavior~=main-sidebar]')
+  $content = $('[id~=view-content]')
 
-  # sidebarOpen = -> 
-  #   $sidebar.removeClass('sidebar-collapsed').addClass('sidebar-expanded')
-  #   $sidebar.attr('data-behavior', 'main-sidebar sidebar-expanded')
-  #   $('[data-behavior~=back-fade]').removeClass('not-faded').addClass('faded')
+  sidebarOpen = -> 
+    $sidebar.removeClass('sidebar-collapsed').addClass('sidebar-expanded')
+    $content.removeClass('view-content-collapsed ').addClass('view-content-expanded')
+    $sidebar.attr('data-behavior', 'main-sidebar sidebar-expanded')
 
-  # sidebarClose = ->
-  #   $sidebar.removeClass('sidebar-expanded').addClass('sidebar-collapsed')
-  #   $sidebar.attr('data-behavior', 'main-sidebar sidebar-collapsed')
-  #   $('[data-behavior~=back-fade]').removeClass('faded').addClass('not-faded')
+    # $('[data-behavior~=back-fade]').removeClass('not-faded').addClass('faded')
 
-  # $('[data-behavior~=sidebar-toggle]').on 'click', ->
-  #   if $sidebar.is('[data-behavior~=sidebar-collapsed]')
-  #     sidebarOpen()
-  #   else
-  #     if $(this).is('[data-behavior~=open-only]')
-  #       return
-  #     else
-  #       sidebarClose()
+  sidebarClose = ->
+    $sidebar.removeClass('sidebar-expanded').addClass('sidebar-collapsed')
+    $content.removeClass('view-content-expanded').addClass('view-content-collapsed')
+    $sidebar.attr('data-behavior', 'main-sidebar sidebar-collapsed')
+    # $('[data-behavior~=back-fade]').removeClass('faded').addClass('not-faded')
+
+  $('[data-behavior~=sidebar-toggle]').on 'click', ->
+    if $sidebar.is('[data-behavior~=sidebar-collapsed]')
+      sidebarOpen()
+    else
+      if $(this).is('[data-behavior~=open-only]')
+        return
+      else
+        sidebarClose()
 
   # $('[data-behavior~=back-fade]').on 'click', ->
   #   sidebarClose()

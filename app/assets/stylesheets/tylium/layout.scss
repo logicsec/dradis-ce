@@ -53,14 +53,24 @@
   cursor: default;
 }
 
+
+.view-content-collapsed {
+  left: $sidebarCollapsed;
+  transition: left .3s ease;
+}  
+
+.view-content-expanded {
+  left: $sidebarExpanded;
+  transition: right .3s ease;
+}
+
 .view-content {
   background: $secondaryBgColor;
   position: fixed;
   height: calc(100vh - 60px);
-  width: calc(100vw - 250px);
+  width: 100%;
   min-width: 570px;
   top: $navbarHeight;
-  left: $sidebarExpanded;
   overflow: auto;
   font-size: 0.9rem;
 

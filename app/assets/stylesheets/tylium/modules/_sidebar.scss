@@ -236,7 +236,7 @@
 
     .scroll-more-wrapper {
       animation: fadeoutscroll 1s forwards;
-    }
+    }    
 
     .sidebar-link-label,
     .sidebar-link-icon {
@@ -286,7 +286,7 @@
     .scroll-more-wrapper:not(.hidden) {
       opacity: 0;
       animation: fadein 1s forwards;
-    }
+    }   
 
     .sidebar-toggle-icon {
       transform: rotate(180deg);
