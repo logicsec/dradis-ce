@@ -1,12 +1,23 @@
 <% content_for :title, "#{@node.label} - properties" %>
 
 <ul id="node-tabs" class="tabs-container nav nav-tabs main-tabs">
+  <% if !@node.children.empty? %>
+    <li class="nav-item">
+      <a href="#nodes-tab" data-toggle="tab" class="nav-link <%= 'active' if !params[:tab] ||  params[:tab] == 'nodes-tab' %>"><i class="fa fa-file-text-o"></i> Nodes</a>
+    </li>
+  <% end %>
   <li class="nav-item">
     <a href="#evidence-tab" data-toggle="tab" class="nav-link <%= 'active' if params[:tab] == 'evidence-tab' %>"><i class="fa fa-flag"></i> Evidence</a>
   </li>
-  <li class="nav-item">
-    <a href="#notes-tab" data-toggle="tab" class="nav-link <%= 'active' if !params[:tab] ||  params[:tab] == 'notes-tab' %>"><i class="fa fa-file-text-o"></i> Notes</a>
-  </li>
+  <% if @node.children.empty? %>
+    <li class="nav-item">
+      <a href="#notes-tab" data-toggle="tab" class="nav-link <%= 'active' if !params[:tab] || params[:tab] == 'notes-tab' %>"><i class="fa fa-file-text-o"></i> Notes</a>
+    </li>
+  <% else %>
+    <li class="nav-item">
+      <a href="#notes-tab" data-toggle="tab" class="nav-link <%= 'active' if params[:tab] == 'notes-tab' %>"><i class="fa fa-file-text-o"></i> Notes</a>
+    </li>                                             
+  <% end %>
   <li class="nav-item">
     <a href="#properties-tab" data-toggle="tab" class="nav-link <%= 'active' if params[:tab] == 'properties-tab' %>">
     <% if @node.type_id == Node::Types::HOST %>
@@ -68,8 +79,11 @@
     </div>
 
     
-
-    <div class="tab-pane <%= "active" if !params[:tab] ||  params[:tab] == "notes-tab" %>" id="notes-tab">
+    <% if @node.children.empty? %>
+      <div class="tab-pane <%= "active" if !params[:tab] || params[:tab] == "notes-tab" %>" id="notes-tab">
+    <% else %>
+      <div class="tab-pane <%= "active" if params[:tab] == "notes-tab" %>" id="notes-tab">
+    <% end %>
       <h4 class="header-underline">Notes</h4>
       <% if @sorted_notes.any? %>
         <div id="node-notes-table"
@@ -91,6 +105,40 @@
 
     <div class="tab-pane <%= "active" if params[:tab] == "attachments-tab" %>" id="attachments-tab">
       <%= render 'attachments/attachment_tab' %>
+    </div>
+
+    <% if !@node.children.empty? %>
+      <div class="tab-pane <%= "active" if !params[:tab] || params[:tab] == "notes-tab" %>" id="notes-tab">
+    <% else %>
+      <div class="tab-pane <%= "active" if params[:tab] == "notes-tab" %>" id="notes-tab">
+    <% end %>                                       
+      <h4 class="header-underline">Nodes</h4>
+      <div class="nodes-list restrict-height pb-4 px-3" data-behavior="restrict-height">
+        <% if @nodes.empty? %>
+        <% else %>     
+
+          <div class="row">
+            <% @node.children.each do |node| %>
+              <div class="col-sm-6 col-xl-3">
+                <%= link_to main_app.project_node_path(node.project, node), title: node.label, data: { behavior: 'sidebar-link' } do %>
+                  <div class="card mb-4">
+                    <div class="card-body" style="background-color: #434c5e;">
+                      <div class="d-flex align-items-center">
+                        <div class="fa fa-laptop display-2 text-success"></div>
+                          <div class="ml-3">
+                            <div class="text-muted large">
+                              <%= node.label %>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <% end %>                                                        
+            <% end %>
+          </div>
+        <% end %>
+      </div>
     </div>
 
     <div class="tab-pane <%= "active" if params[:tab] == "activity-tab" %>" id="activity-tab">
