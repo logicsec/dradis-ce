@@ -93,42 +93,41 @@
 }
 
 .card-counter {
-  box-shadow: 2px 2px 10px #DADADA;
-  margin-bottom: 5px;
-  padding: 20px 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
   background-color: #fff;
+  border-radius: 3px;
+  margin-bottom: 1.3rem;
+  box-shadow: 5px 7px 12px -5px #9f9fbb;
+  -webkit-box-shadow: 5px 7px 12px -5px #9f9fbb;
   height: 100px;
-  border-radius: 5px;
-  transition: .3s linear all;
+  margin-left: 1.25rem;
 
   &:hover {
     box-shadow: 4px 4px 20px #DADADA;
     transition: .3s linear all;
   }
 
-  &.primary {
-    background-color: #5271C2;
+  &.windows {
+    background-color: #5c80d1;
     color: #FFF;
   }
 
-  &.danger {
-    background-color: #ef5350;
-    color: #FFF;
-  }
-
-  &.success {
-    background-color: #66bb6a;
-    color: #FFF;
-  }
-
-  &.info {
-    background-color: #26c6da;
+  &.linux {
+    background-color: #e8b210;
     color: #FFF;
   }
 
   i {
-    font-size: 5em;
-    opacity: 0.2;
+    font-size: 60px;
+    text-align: right;
+    position: absolute;
+    top: 21px;
+    right: 38px;
+    outline: none;
   }
 
   .count-numbers {
@@ -142,11 +141,29 @@
   .count-name {
     position: absolute;
     right: 35px;
-    top: 65px;
-    font-style: italic;
+    top: 45px;
     text-transform: capitalize;
-    opacity: 0.5;
     display: block;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.0;
+  }
+}
+
+.hosticons {
+  .fa {
+    font-size: 70px;
+    text-align: left;
+    position: absolute;
+    top: 15px;
+    left: 38px;
+    outline: none;
+  }
+
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+  a {
+    text-decoration: none;
   }
 }
