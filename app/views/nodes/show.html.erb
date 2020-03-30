@@ -117,24 +117,22 @@
         <% if @nodes.empty? %>
         <% else %>     
 
-          <div class="row">
-            <% @node.children.each do |node| %>
-              <div class="col-sm-6 col-xl-3">
+          <div class="row no-gutters d-flex justify-content-center">
+            <% @node.children.each do |node| %>              
+              <div class="col-md-2 ml-2">
                 <%= link_to main_app.project_node_path(node.project, node), title: node.label, data: { behavior: 'sidebar-link' } do %>
-                  <div class="card mb-4">
-                    <div class="card-body" style="background-color: #434c5e;">
-                      <div class="d-flex align-items-center">
-                        <div class="fa fa-laptop display-2 text-success"></div>
-                          <div class="ml-3">
-                            <div class="text-muted large">
-                              <%= node.label %>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="card-counter primary">
+                    <% if node.type_id == Node::Types::WINDOWS %>  
+                      <i class="fa fa-windows"></i>
+                    <% end %>
+                    <% if node.type_id == Node::Types::LINUX %>  
+                      <i class="fa fa-linux"></i>
+                    <% end %>
+                    <span class="count-numbers"></span>
+                    <span class="count-name"><%= node.label %></span>
                   </div>
-                </div>
-              <% end %>                                                        
+                <% end %> 
+              </div>                                                    
             <% end %>
           </div>
         <% end %>

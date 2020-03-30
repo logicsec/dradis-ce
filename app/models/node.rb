@@ -13,7 +13,9 @@ class Node < ApplicationRecord
     METHODOLOGY = 2
     ISSUELIB = 3
     FOLDER = 4
-    USER_TYPES = [DEFAULT, HOST, FOLDER]
+    WINDOWS = 5
+    LINUX = 6
+    USER_TYPES = [DEFAULT, HOST, WINDOWS, LINUX]
   end
 
   acts_as_tree counter_cache: true, order: :label

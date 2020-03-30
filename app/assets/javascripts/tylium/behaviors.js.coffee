@@ -164,9 +164,8 @@ document.addEventListener "turbolinks:load", ->
 
   sidebarOpen = -> 
     $sidebar.removeClass('sidebar-collapsed').addClass('sidebar-expanded')
-    $content.removeClass('view-content-collapsed ').addClass('view-content-expanded')
+    $content.removeClass('view-content-collapsed').addClass('view-content-expanded')
     $sidebar.attr('data-behavior', 'main-sidebar sidebar-expanded')
-
     # $('[data-behavior~=back-fade]').removeClass('not-faded').addClass('faded')
 
   sidebarClose = ->
@@ -184,12 +183,12 @@ document.addEventListener "turbolinks:load", ->
       else
         sidebarClose()
 
-  # $('[data-behavior~=back-fade]').on 'click', ->
-  #   sidebarClose()
+  $('[data-behavior~=back-fade]').on 'click', ->
+    sidebarClose()
 
-  # $('[data-behavior~=sidebar-link]').on 'click', ->
-  #   if $sidebar.is('[data-behavior~=sidebar-expanded]')
-  #     sidebarClose() 
+  $('[data-behavior~=sidebar-link]').on 'click', ->
+    if $sidebar.is('[data-behavior~=sidebar-expanded]')
+      sidebarClose() 
 
   # Scroll for more indicator functionality
   if $('[data-behavior~=restrict-height').length

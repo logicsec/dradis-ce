@@ -19,6 +19,12 @@
     <% if node.type_id == Node::Types::FOLDER %>
       <i class="fa fa-folder-o"></i>
     <% end %>
+    <% if node.type_id == Node::Types::WINDOWS %>  
+      <i class="fa fa-windows"></i>
+    <% end %>
+    <% if node.type_id == Node::Types::LINUX %>  
+      <i class="fa fa-linux"></i>
+    <% end %>
     <%= node.label %>
   <% end %>
 
