@@ -7,7 +7,11 @@
           <%= content_tag :div, class: current_page?(main_app.project_node_path(@node.project, @node)) do %>
             <%= link_to project_node_path(@node.project, @node) do %>
               <% if @node.type_id == Node::Types::HOST %>
-                <i class="fa fa-laptop"></i> 
+                <i class="fa fa-laptop"></i>
+              <% elsif @node.type_id == Node::Types::WINDOWS %>  
+                <i class="fa fa-windows"></i>
+              <% elsif @node.type_id == Node::Types::LINUX %>  
+                <i class="fa fa-linux"></i> 
               <% else%>
                 <i class="fa fa-cogs"></i>
               <% end %>
