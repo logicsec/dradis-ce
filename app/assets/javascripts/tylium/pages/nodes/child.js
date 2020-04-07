@@ -55,11 +55,11 @@ showig_rows_count = function(maxRows, pageNum, totalRows) {
 
 default_index = function() {
   var id;
-  $('table tr:eq(0)').prepend('<th> ID </th>');
+  //$('table tr:eq(0)').prepend('<th> ID </th>');
   id = 0;
   $('table tr:gt(0)').each(function() {
     id++;
-    $(this).prepend('<td>' + id + '</td>');
+    //$(this).prepend('<td>' + id + '</td>');
   });
 };
 
