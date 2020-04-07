@@ -219,3 +219,4 @@ document.addEventListener "turbolinks:load", ->
   $('[data-behavior~=smooth-scroll]').on 'click', ->
     target = $(this).data('target');
     $('[data-id~=' + target + ']')[0].scrollIntoView({behavior: "smooth"});
+    

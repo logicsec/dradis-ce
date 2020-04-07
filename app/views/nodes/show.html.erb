@@ -113,28 +113,8 @@
       <div class="tab-pane <%= "active" if params[:tab] == "notes-tab" %>" id="notes-tab">
     <% end %>                                       
       <h4 class="header-underline">Nodes</h4>
-      <div class="nodes-list restrict-height pb-4 px-3" data-behavior="restrict-height">
-        <% if @nodes.empty? %>
-        <% else %>   
-
-          <div class="row no-gutters d-flex justify-content-center">
-            <% @node.children.each do |node| %>   
-              <div class="col-sm-12 col-lg-6 col-xl-3">
-                <%= link_to main_app.project_node_path(node.project, node), title: node.label, data: { behavior: 'sidebar-link' } do %>
-                  <div class="card-counter hosticons <%= node.type_id == Node::Types::WINDOWS ? 'windows' : 'linux' %>">
-                    <% if node.type_id == Node::Types::WINDOWS %>  
-                      <i class="fa fa-windows"></i>
-                    <% end %>
-                    <% if node.type_id == Node::Types::LINUX %>  
-                      <i class="fa fa-linux"></i>
-                    <% end %>
-                    <span class="count-name"><%= node.label %></span>
-                  </div>
-                <% end %> 
-              </div>   
-            <% end %>
-          </div>
-        <% end %>
+      <div id="nodes-table" class="nodes-list restrict-height pb-4 px-3" data-behavior="restrict-height">
+        <%= render partial: 'child' %>
       </div>
     </div>
 

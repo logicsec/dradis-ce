@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_08_120900) do
+ActiveRecord::Schema.define(version: 2020_04_07_141935) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -133,6 +133,8 @@ ActiveRecord::Schema.define(version: 2020_01_08_120900) do
     t.integer "position"
     t.text "properties"
     t.integer "children_count", default: 0, null: false
+    t.string "ip"
+    t.string "status"
     t.index ["parent_id"], name: "index_nodes_on_parent_id"
     t.index ["type_id"], name: "index_nodes_on_type_id"
   end

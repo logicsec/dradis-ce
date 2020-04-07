@@ -10,9 +10,12 @@
       </div>
       <div class="modal-body">
         <%= f.input :label, label: "New name" %>
-      </div>
+        <%= f.input :ip, label: "IP Address" %>
+        <%= f.input :status, collection: [["Open", Node::Status::OPEN], ["In Progress", Node::Status::PENDING], ["Complete", Node::Status::CLOSED]], include_blank: false, label: 'Status' %>
+        <%= f.input :type_id, collection: [["No icon", Node::Types::DEFAULT], ["Host", Node::Types::HOST], ["OS - Windows", Node::Types::WINDOWS], ["OS - Linux", Node::Types::LINUX]], include_blank: false, label: 'Icon' %>
+        </div>
       <div class="modal-footer">
-        <button class="btn btn-primary">Rename</button>
+        <button class="btn btn-primary">Save</button>
         <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
       </div>
     </div>

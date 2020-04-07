@@ -18,6 +18,12 @@ class Node < ApplicationRecord
     USER_TYPES = [DEFAULT, HOST, WINDOWS, LINUX]
   end
 
+  module Status
+    OPEN = 'Open'
+    PENDING = 'In Progress'
+    CLOSED = 'Complete'
+  end
+
   acts_as_tree counter_cache: true, order: :label
 
   # -- Relationships --------------------------------------------------------

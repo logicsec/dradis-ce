@@ -50,6 +50,7 @@
 //= require tylium/pages/boards
 //= require tylium/pages/nodes/new_form
 //= require tylium/pages/nodes/tables
+//= require tylium/pages/nodes/child
 //= require tylium/pages/projects/boards_summary
 //= require tylium/pages/projects/issues_chart
 //= require tylium/pages/projects/summary

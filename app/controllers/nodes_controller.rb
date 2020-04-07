@@ -115,6 +115,6 @@ class NodesController < NestedNodeResourceController
 
   private
   def node_params
-    params.require(:node).permit(:label, :parent_id, :position, :raw_properties, :type_id)
+    params.require(:node).permit(:label, :ip, :status, :parent_id, :position, :raw_properties, :type_id)
   end
 end
