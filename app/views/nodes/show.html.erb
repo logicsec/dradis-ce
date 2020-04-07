@@ -113,9 +113,7 @@
       <div class="tab-pane <%= "active" if params[:tab] == "notes-tab" %>" id="notes-tab">
     <% end %>                                       
       <h4 class="header-underline">Nodes</h4>
-      <div id="nodes-table" class="nodes-list restrict-height pb-4 px-3" data-behavior="restrict-height">
-        <%= render partial: 'child' %>
-      </div>
+      <%= render partial: 'child' %>
     </div>
 
     <div class="tab-pane <%= "active" if params[:tab] == "activity-tab" %>" id="activity-tab">
