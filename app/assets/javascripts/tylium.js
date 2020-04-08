@@ -17,6 +17,7 @@
 //= require bootstrap
 //= require datatables
 //= require datatablesButton
+//= require datatables.bootstrap4
 
 //= require vendor/stupidtable
 

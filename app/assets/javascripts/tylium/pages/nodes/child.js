@@ -1,6 +1,12 @@
-$(document).ready(function() {
-  var table = $('#ndtable').DataTable( {
+  document.addEventListener("turbolinks:load", function() {
+    "use strict";
+    var table = $('#ndtable').DataTable( {
       dom: 'Bfrtip',
+      columnDefs: [
+        { targets: 0, width: "1%"},
+        { targets: [2,3], width: "10%"},
+        { targets: '_all', visible: true }
+      ],
       buttons: [
           {
               text: 'All',
@@ -32,4 +38,4 @@ $(document).ready(function() {
           }
       ]
   } );
-} );
+  });
