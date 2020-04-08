@@ -6,30 +6,30 @@ $(document).ready(function() {
         buttons: [
             {
                 text: 'All',
-                className: 'btn btn-danger',
+                className: 'btn btn-info',
                 action: function () {
-                  table.search("").draw();
+                  table.columns(3).search("").draw();
                 }
             },
             {
                 text: 'Open',
                 className: 'btn btn-danger',
                 action: function () {
-                  table.search("open").draw();
+                  table.columns(3).search("open").draw();
                 }
             },
             {
                 text: 'In Progress',
                 className: 'btn btn-warning',
                 action: function () {
-                  table.search("In Progress").draw();
+                  table.columns(3).search("In Progress").draw();
                 }
             },
             {
                 text: 'Complete',
                 className: 'btn btn-success',
                 action: function () {
-                  table.search("Complete").draw();
+                  table.columns(3).search("Complete").draw();
                 }
             }
         ]

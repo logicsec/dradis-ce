@@ -92,64 +92,6 @@
   }
 }
 
-.card-counter {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  border-radius: 3px;
-  margin-bottom: 1.3rem;
-  box-shadow: 5px 7px 12px -5px #9f9fbb;
-  -webkit-box-shadow: 5px 7px 12px -5px #9f9fbb;
-  height: 100px;
-  margin-left: 1.25rem;
-
-  &:hover {
-    box-shadow: 4px 4px 20px #DADADA;
-    transition: .3s linear all;
-  }
-
-  &.windows {
-    background-color: #5c80d1;
-    color: #FFF;
-  }
-
-  &.linux {
-    background-color: #e8b210;
-    color: #FFF;
-  }
-
-  i {
-    font-size: 60px;
-    text-align: right;
-    position: absolute;
-    top: 21px;
-    right: 38px;
-    outline: none;
-  }
-
-  .count-numbers {
-    position: absolute;
-    right: 35px;
-    top: 20px;
-    font-size: 32px;
-    display: block;
-  }
-
-  .count-name {
-    position: absolute;
-    right: 35px;
-    top: 45px;
-    text-transform: capitalize;
-    display: block;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.0;
-  }
-}
-
 .hosticons {
   .fa {
     font-size: 70px;
@@ -166,4 +108,10 @@
   a {
     text-decoration: none;
   }
+}
+.btn-warning {
+  color: #fff !important;
+}
+.btn-info {
+  background: #17a2b8;
 }
