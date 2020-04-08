@@ -5,6 +5,7 @@
       columnDefs: [
         { targets: 0, width: "1%"},
         { targets: [2,3], width: "10%"},
+        { targets: 4, width: "1%", "className": "text-center"},
         { targets: '_all', visible: true }
       ],
       buttons: [
