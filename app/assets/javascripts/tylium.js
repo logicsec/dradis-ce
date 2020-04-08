@@ -15,6 +15,8 @@
 //= require tribute
 //= require popper
 //= require bootstrap
+//= require datatables
+//= require datatablesButton
 
 //= require vendor/stupidtable
 
