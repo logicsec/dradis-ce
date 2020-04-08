@@ -3,15 +3,21 @@
 <ul id="node-tabs" class="tabs-container nav nav-tabs main-tabs">
   <% if !@node.children.empty? %>
     <li class="nav-item">
-      <a href="#nodes-tab" data-toggle="tab" class="nav-link <%= 'active' if params[:tab] == 'nodes-tab' %>"><i class="fa fa-file-text-o"></i> Nodes</a>
+      <a href="#nodes-tab" data-toggle="tab" class="nav-link <%= 'active' if !params[:tab] ||  params[:tab] == 'nodes-tab' %>"><i class="fa fa-file-text-o"></i> Nodes</a>
     </li>
   <% end %>
   <li class="nav-item">
     <a href="#evidence-tab" data-toggle="tab" class="nav-link <%= 'active' if params[:tab] == 'evidence-tab' %>"><i class="fa fa-flag"></i> Evidence</a>
   </li>
-  <li class="nav-item">
-    <a href="#notes-tab" data-toggle="tab" class="nav-link <%= 'active' if !params[:tab] || params[:tab] == 'notes-tab' %>"><i class="fa fa-file-text-o"></i> Notes</a>
-  </li>
+  <% if @node.children.empty? %>
+    <li class="nav-item">
+      <a href="#notes-tab" data-toggle="tab" class="nav-link <%= 'active' if !params[:tab] || params[:tab] == 'notes-tab' %>"><i class="fa fa-file-text-o"></i> Notes</a>
+    </li>
+  <% else %>
+    <li class="nav-item">
+      <a href="#notes-tab" data-toggle="tab" class="nav-link <%= 'active' if params[:tab] == 'notes-tab' %>"><i class="fa fa-file-text-o"></i> Notes</a>
+    </li>                                             
+  <% end %>
   <li class="nav-item">
     <a href="#properties-tab" data-toggle="tab" class="nav-link <%= 'active' if params[:tab] == 'properties-tab' %>">
     <% if @node.type_id == Node::Types::HOST %>
@@ -73,7 +79,11 @@
     </div>
 
     
-    <div class="tab-pane <%= "active" if !params[:tab] || params[:tab] == "notes-tab" %>" id="notes-tab">
+    <% if @node.children.empty? %>
+      <div class="tab-pane <%= "active" if !params[:tab] || params[:tab] == "notes-tab" %>" id="notes-tab">
+    <% else %>
+      <div class="tab-pane <%= "active" if params[:tab] == "notes-tab" %>" id="notes-tab">
+    <% end %>
       <h4 class="header-underline">Notes</h4>
       <% if @sorted_notes.any? %>
         <div id="node-notes-table"
@@ -97,7 +107,11 @@
       <%= render 'attachments/attachment_tab' %>
     </div>
 
-    <div class="tab-pane <%= "active" if params[:tab] == "nodes-tab" %>" id="nodes-tab">                                       
+    <% if !@node.children.empty? %>
+      <div class="tab-pane <%= "active" if !params[:tab] || params[:tab] == "nodes-tab" %>" id="nodes-tab">
+    <% else %>
+      <div class="tab-pane <%= "active" if params[:tab] == "nodes-tab" %>" id="nodes-tab">
+    <% end %>                                       
       <h4 class="header-underline">Nodes</h4>
       <%= render partial: 'child' %>
     </div>
