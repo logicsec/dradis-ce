@@ -93,14 +93,6 @@ GIT
       nokogiri (~> 1.3)
 
 GIT
-  remote: https://github.com/dradis/dradis-nmap.git
-  revision: 6448d87ba755decb62e95e705cf3affd1b36007d
-  specs:
-    dradis-nmap (3.16.0)
-      dradis-plugins (~> 3.6)
-      ruby-nmap (~> 0.7)
-
-GIT
   remote: https://github.com/dradis/dradis-ntospider.git
   revision: 47ceb53c1b34a34c2a6b4e84f65ac9de11140061
   specs:
@@ -140,6 +132,18 @@ GIT
     dradis-zap (3.16.0)
       dradis-plugins (~> 3.6)
       nokogiri (~> 1.3)
+
+PATH
+  remote: dradis-nmap
+  specs:
+    dradis-nmap (3.16.0)
+      dradis-plugins (~> 3.6)
+      ruby-nmap (~> 0.7)
+
+PATH
+  remote: dradis-plugins
+  specs:
+    dradis-plugins (3.16.0)
 
 PATH
   remote: engines/dradis-api
@@ -248,7 +252,6 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.3)
     differ (0.1.2)
-    dradis-plugins (3.16.0)
     dradis-projects (3.16.0)
       dradis-plugins (~> 3.7)
       rubyzip
@@ -632,10 +635,10 @@ DEPENDENCIES
   dradis-netsparker (~> 3.15)!
   dradis-nexpose (~> 3.15)!
   dradis-nikto (~> 3.15)!
-  dradis-nmap (~> 3.15)!
+  dradis-nmap!
   dradis-ntospider (~> 3.15)!
   dradis-openvas (~> 3.15)!
-  dradis-plugins (~> 3.15)
+  dradis-plugins!
   dradis-projects (~> 3.15)
   dradis-qualys (~> 3.15)!
   dradis-saint!
