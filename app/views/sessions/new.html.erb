@@ -1,34 +1,23 @@
-<div class="col-6 offset-3">
-  <div class="card">
-    <div class="card-header bg-custom">
-      <h5 class="m-0">Dradis Community Edition</h5>
+<div id="page-wrapper">
+  <div id="modal-wrapper">
+    <div id="modal">
+      <div id="cards">
+        <div class="card" id="login">
+          <div class="box">
+            <%= link_to image_tag('logo.png', height: 75), 'http://dradisframework.org' %>
+          </div>
+          <%= form_tag session_path, id: 'login-form' do -%>
+            <label>Username
+            </label>
+            <%= text_field_tag 'login', nil, placeholder: 'Choose any user name you want', class: 'textbox', id: 'login-email', autofocus: true %>
+            <label>Password
+            </label>
+            <%= password_field_tag 'password', nil, class: 'textbox', id: 'login-password' %>
+
+            <button type="submit" class="proceed mt-3">Log-in to your account <i class="ion-ios-arrow-thin-right"></i></button>
+          <% end %>
+        </div>
+      </div>
     </div>
-    <div class="card-body">
-      <%= form_tag session_path, class: 'form-horizontal' do -%>
-
-        <%= flash_messages %>
-
-        <div class="form-group row">
-          <label class="col-sm-3 col-form-label" for="login">Username</label>
-          <div class="col-sm-9">
-            <%= text_field_tag 'login', nil, placeholder: 'Choose any user name you want', class: 'form-control', autofocus: true %>
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label class="col-sm-3 col-form-label" for="password">Password</label>
-          <div class="col-sm-9">
-            <%= password_field_tag 'password', nil, class: 'form-control' %>
-          </div>
-        </div>
-
-        <div class="form-group mb-0 row">
-          <div class="col-sm-9 offset-sm-3">
-            <%= submit_tag 'Let me in!', class: 'btn btn-lg btn-primary' %>
-          </div>
-        </div>
-
-      <% end -%>
-    <div>
   </div>
 </div>
