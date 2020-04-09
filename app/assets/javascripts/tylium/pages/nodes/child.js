@@ -1,11 +1,12 @@
   document.addEventListener("turbolinks:load", function() {
     "use strict";
     var table = $('#ndtable').DataTable( {
-      dom: 'Bfrtip',
+      dom:  "<'row'<'col-sm-4'l><'col-sm-4'B><'col-sm-4'f>>" +
+            "<'row'<'col-sm-12'tr>>" +
+            "<'row'<'col-sm-3'i><'col-sm-9'p>>",
       columnDefs: [
         { targets: 0, width: "1%"},
         { targets: [2,3], width: "10%"},
-        { targets: 4, width: "1%", "className": "text-center"},
         { targets: '_all', visible: true }
       ],
       buttons: [
@@ -38,5 +39,20 @@
               }
           }
       ]
-  } );
+    });
+
+    new $.fn.dataTable.Buttons( table, {
+      buttons: [
+          {
+            text: '<i class="fa fa-plus"></i> Add',
+            className: 'btn btn-sm btn-success mr-3',
+            action: function (e, node, config){
+              $('#modal_add_child_node').modal('show')
+            }
+          }
+      ]
+    });
+    table.buttons(1, null).container().appendTo(
+      $('div.dataTables_length')
+    );
   });

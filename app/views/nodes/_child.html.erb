@@ -2,6 +2,7 @@
 <% else %>
   <div class="table-container">
     <div class="node-info">
+    
       <table id="ndtable" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
@@ -9,7 +10,6 @@
               <th>Machine</th>
               <th>IP</th>
               <th>Status</th>
-              <th>Options</th>
             </tr>
         </thead>
         <tbody>
@@ -40,11 +40,6 @@
                 <button class="btn btn-success w-100"><%= node.status %></button>
               <% end %>
             </td>
-            <td>
-              <%= link_to edit_project_node_path(:id => node.id) do %>
-                <button class="btn btn-info">Edit</button>
-              <% end %>
-            </td>
           </tr>
           <% end %>
         </tbody>
@@ -54,7 +49,6 @@
               <th>Machine</th>
               <th>IP</th>
               <th>Status</th>
-              <th>Options</th>
             </tr>
         </tfoot>
       </table>
